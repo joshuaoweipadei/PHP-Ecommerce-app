@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  background-color: #fbfbfb;
+}
+
+html, body {
+  font-family: Arial;
+  color: #211a1a;
+  font-size: 0.9em;
+}
+
+.btnAddAction {
+  padding: 5px 10px;
+  background-color: #efefef;
+  border: #E0E0E0 1px solid;
+  color: #211a1a;
+  text-decoration: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btnAddAction:hover {
+  background-color: #0e00d0;
+  border: #0e00d0 1px solid;
+  color: #fff;
+}
+
+.btnDiscountAction {
+  padding: 10px 10px;
+  background-color: #0e00d0;
+  border: #0e00d0 1px solid;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#btnEmpty {
+  background-color: #ffffff;
+  border: #d00000 1px solid;
+  padding: 5px 10px;
+  color: #d00000;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+#viewCart {
+  background-color: none;
+  border: 1px solid #0e00d0;
+  padding: 5px 10px;
+  color: #0e00d0;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.btnRemoveAction {
+  border: none;
+  background-color: none;
+}
+
+#product__grid {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.text__heading {
+  color: #211a1a;
+  overflow: auto;
+  font-size: 1.4em;
+}
+
+.product__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+  align-items: center;
+  width: 100%;
+  grid-gap: 26px;
+}
+@media screen and (max-width: 1024px){
+  .product__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px){
+  .product__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product__item {
+  background: #e1e1e1;
+  border: #E0E0E0 1px solid;;
+}
+
+.product__link {
+  text-decoration: none;
+  color: #211a1a;
+}
+
+.product__image {
+  height: 190px;
+  width: 100%;
+  background-color: #FFF;
+}
+
+.product__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__tile__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8px 20px;
+  overflow: auto;
+}
+
+.cart__action {
+  padding: 0px 8px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__quantity {
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: #E0E0E0 1px solid;
+  outline: none;
+}
+
+
+#shopping__cart {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
+
+#shopping__cart table {
+  width: 100%;
+  background-color: #F0F0F0;
+  table-layout: fixed;
+}
+
+#shopping__cart table tr {
+  margin-bottom: 20px;
+}
+
+#shopping__cart table th {
+  font-size: 16px;
+  padding: 10px 3px;
+  font-weight: normal;
+}
+
+#shopping__cart table td {
+  background-color: #FFFFFF;
+  padding: 6px 3px;
+  /* font-size: 1em; */
+}
+
+@media screen and (max-width: 600px) {
+  #shopping__cart table {
+    border: 0;
+  }
+  
+  #shopping__cart table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  #shopping__cart table tr {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: 1.225em;
+  }
+  
+  #shopping__cart table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right;
+  }
+  
+  #shopping__cart table td::before {
+/*     
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  #shopping__cart table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.shopping__cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px 0;
+}
+
+#shopping__cart table td .cart__itemImage {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: #E0E0E0 1px solid;
+  padding: 1px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+
+#discount-grid {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 0 10px 30px;
+}
+
+.discount-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.discount-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-gap: 10px
+}
+@media screen and (max-width: 600px) {
+  .discount-action {
+    display: grid;
+  }
+}
+
+.discount-code {
+  padding: 10px 10px 10px 10px;
+  border: #E0E0E0 1px solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+}
+
+.no-records {
+  text-align: center;
+  clear: both;
+  margin: 38px 0px;
+}
+
+.error-message {
+  color: #FF0000;
+  font: 18px;
+  text-align: right;
+}
+
+#product__view {
+  border: #e1e1e1 1px solid;
+  display: flex;
+  grid-gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+#preview__enlarged {
+  max-width: 650px;
+  height: 450px;
+}
+
+.preview__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid #e1e1e1;
+}
+
+.preview__image img.focused {
+  border: #fbb20f 2px solid;
+}
+
+#thumbnail__container {
+  width: 70px;
+  display: flex;
+  justify-content: flex-start;
+  grid-gap: 8px;
+  padding: 15px 5px 5px 0px;
+}
+
+.preview__image img.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+.preview__image img.thumbnail:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1), 0 0 0 0px
+      rgba(0, 0, 0, 0.1);
+}
+
+.product__title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+button.addCart {
+  padding: 10px;
+  margin: 20px 20px 10px 0px;
+  padding: 10px 20px;
+  background: #0e00d0;
+  border: #0e00d0 1px solid;
+  border-radius: 3px;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.info__link {
+  padding: 10px;
+  margin: 20px 20px 10px 0px;
+  padding: 10px 20px;
+  background: #efefef;
+  border: #e1e1e1 1px solid;
+  border-radius: 3px;
+  color: #211a1a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  #product__view {
+      flex-direction: column;
+  }
+  #preview__enlarged {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 340px) {
+  #preview__enlarged {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 290px) {
+  #thumbnail__container {
+      flex-direction: column;
+  }
+  #preview__enlarged {
+    height: 180px;
+  }
+}
+
